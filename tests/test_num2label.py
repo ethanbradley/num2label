@@ -33,9 +33,9 @@ class TestNum2Label(unittest.TestCase):
         self.assertEqual(uppercase_letter(26, strict=True), "Z")
         self.assertRaises(ValueError, uppercase_letter, -1000)
         self.assertRaises(ValueError, uppercase_letter, 0)
-        self.assertRaises(ValueError, uppercase_letter, "1")
+        self.assertRaises(ValueError, uppercase_letter, "14")
         self.assertRaises(ValueError, uppercase_letter, 65.2)
-        self.assertRaises(ValueError, uppercase_letter, 27, strict=True)
+        self.assertRaises(ValueError, uppercase_letter, 42, strict=True)
 
     def test_spreadsheet_column(self):
         self.assertIsInstance(spreadsheet_column(8), str)
