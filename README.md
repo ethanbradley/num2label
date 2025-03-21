@@ -37,4 +37,4 @@ Map a number to a spreadsheet column label:
 
 ## Number bounds
 
-The number must always be greater than zero. The number can be greater than 26. `uppercase_letter` and `lowercase_letter` will effectively loop the alphabet until the corresponding letter is reached (i.e. `27 => 'a'`, `55 => 'C'`). To ensure the number passed is strictly less than 27, pass `strict=True`. `num2label.lowercase_letter(27, strict=True)` will raise an error because the number is not between one and 26 (inclusive).
+The number must always be greater than zero. The number can be greater than 26. `uppercase_letter` and `lowercase_letter` will effectively loop the alphabet until the corresponding letter is reached (e.g., `27 => 'a'`, `55 => 'C'`). To ensure the number passed is strictly less than 27, pass `strict=True`. `num2label.lowercase_letter(27, strict=True)` will raise an error because the number is not between one and 26 (inclusive).
