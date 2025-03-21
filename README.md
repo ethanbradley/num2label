@@ -4,27 +4,37 @@ A package to map numbers to text labels. For example, `n` maps to the `nth` lett
 
 ## Quick start
 
-Map an integer to a lowercase letter of the alphabet:
+To get started, import `num2label`:
 
 ```python3
 >>> import num2label
->>> 
->>> num2label.lowercase_letter(1)
-'a'
 ```
 
-Or an uppercase letter:
+### Integer to letter
+
+Map an integer to an uppercase letter of the alphabet:
 
 ```python3
->>> num2label.uppercase_letter(26)
-'Z'
+>>> num2label.uppercase_letter(1)
+'A'
 ```
 
-Or even map a number to a spreadsheet column label:
+Or a lowercase letter:
+
+```python3
+>>> num2label.lowercase_letter(26)
+'z'
+```
+
+### Integer to spreadsheet column label
+
+Map a number to a spreadsheet column label:
 
 ```python3
 >>> num2label.spreadsheet_column(28)
 'AB'
 ```
 
-The number must always be greater than zero. The number can be greater than 26. `lowercase_letter` and `uppercase_letter` will effectively loop the alphabet until the corresponding letter is reached (i.e. `27 => 'a'`, `55 => 'C'`). To ensure the number passed is strictly less than 27, pass `strict=True`. `num2label.lowercase_letter(27, strict=True)` will raise an error because the number is not between one and 26 (inclusive).
+## Number bounds
+
+The number must always be greater than zero. The number can be greater than 26. `uppercase_letter` and `lowercase_letter` will effectively loop the alphabet until the corresponding letter is reached (i.e. `27 => 'a'`, `55 => 'C'`). To ensure the number passed is strictly less than 27, pass `strict=True`. `num2label.lowercase_letter(27, strict=True)` will raise an error because the number is not between one and 26 (inclusive).

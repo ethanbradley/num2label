@@ -5,22 +5,6 @@ from num2label.num2label import (lowercase_letter, uppercase_letter,
 
 
 class TestNum2Label(unittest.TestCase):
-    def test_lowercase_letter(self):
-        self.assertIsInstance(lowercase_letter(8), str)
-        self.assertEqual(lowercase_letter(1), "a")
-        self.assertEqual(lowercase_letter(4), "d")
-        self.assertEqual(lowercase_letter(26), "z")
-        self.assertEqual(lowercase_letter(35), "i")
-        self.assertEqual(lowercase_letter(36, strict=False), "j")
-        self.assertEqual(lowercase_letter(1, strict=True), "a")
-        self.assertEqual(lowercase_letter(5, strict=True), "e")
-        self.assertEqual(lowercase_letter(26, strict=True), "z")
-        self.assertRaises(ValueError, lowercase_letter, -13)
-        self.assertRaises(ValueError, lowercase_letter, 0)
-        self.assertRaises(ValueError, lowercase_letter, "1")
-        self.assertRaises(ValueError, lowercase_letter, 9.5)
-        self.assertRaises(ValueError, lowercase_letter, 27, strict=True)
-
     def test_uppercase_letter(self):
         self.assertIsInstance(uppercase_letter(8), str)
         self.assertEqual(uppercase_letter(1), "A")
@@ -36,6 +20,22 @@ class TestNum2Label(unittest.TestCase):
         self.assertRaises(ValueError, uppercase_letter, "14")
         self.assertRaises(ValueError, uppercase_letter, 65.2)
         self.assertRaises(ValueError, uppercase_letter, 42, strict=True)
+
+    def test_lowercase_letter(self):
+        self.assertIsInstance(lowercase_letter(8), str)
+        self.assertEqual(lowercase_letter(1), "a")
+        self.assertEqual(lowercase_letter(4), "d")
+        self.assertEqual(lowercase_letter(26), "z")
+        self.assertEqual(lowercase_letter(35), "i")
+        self.assertEqual(lowercase_letter(36, strict=False), "j")
+        self.assertEqual(lowercase_letter(1, strict=True), "a")
+        self.assertEqual(lowercase_letter(5, strict=True), "e")
+        self.assertEqual(lowercase_letter(26, strict=True), "z")
+        self.assertRaises(ValueError, lowercase_letter, -13)
+        self.assertRaises(ValueError, lowercase_letter, 0)
+        self.assertRaises(ValueError, lowercase_letter, "1")
+        self.assertRaises(ValueError, lowercase_letter, 9.5)
+        self.assertRaises(ValueError, lowercase_letter, 27, strict=True)
 
     def test_spreadsheet_column(self):
         self.assertIsInstance(spreadsheet_column(8), str)
