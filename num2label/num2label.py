@@ -20,7 +20,7 @@ def uppercase_letter(number: int, strict: bool=False) -> str:
     """
 
     if not isinstance(number, int):
-        raise ValueError("Number must be an integer.")
+        raise TypeError("Number must be an integer.")
     elif number < 1:
         raise ValueError("Number must be greater than zero.")
     elif strict and number > 26:
@@ -50,7 +50,7 @@ def lowercase_letter(number: int, strict: bool=False) -> str:
     """
 
     if not isinstance(number, int):
-        raise ValueError("Number must be an integer.")
+        raise TypeError("Number must be an integer.")
     elif number < 1:
         raise ValueError("Number must be greater than zero.")
     elif strict and number > 26:
@@ -77,7 +77,7 @@ def spreadsheet_column(number: int) -> str:
     """
 
     if not isinstance(number, int):
-        raise ValueError("Number must be an integer.")
+        raise TypeError("Number must be an integer.")
     elif number < 1:
         raise ValueError("Number must be greater than zero.")
 
