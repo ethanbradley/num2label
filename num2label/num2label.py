@@ -1,12 +1,12 @@
-def uppercase_letter(number: int, strict: bool=False) -> str:
+def uppercase_letter(number: int, strict: bool = False) -> str:
     """
     Map an integer number to an uppercase letter.
 
     This function takes an integer number and maps it to its
-        corresponding uppercase letter in the alphabet (e.g., 1 => 'A').
-        The number must be greater than zero. If the number is greater
-        than 26, the alphabet is effectlively looped until the
-        corresponding letter is reached (e.g., 28 => 'B').
+    corresponding uppercase letter in the alphabet (e.g., 1 => 'A'). The
+    number must be greater than zero. If the number is greater than 26,
+    the alphabet is effectlively looped until the corresponding letter
+    is reached (e.g., 28 => 'B').
 
     Parameters:
         number (int, required): The number to map to an uppercase
@@ -29,15 +29,15 @@ def uppercase_letter(number: int, strict: bool=False) -> str:
     return chr((number - 1) % 26 + ord('A'))
 
 
-def lowercase_letter(number: int, strict: bool=False) -> str:
+def lowercase_letter(number: int, strict: bool = False) -> str:
     """
     Map an integer number to a lowercase letter.
 
     This function takes an integer number and maps it to its
-        corresponding lowercase letter in the alphabet (e.g., 1 => 'a').
-        The number must be greater than zero. If the number is greater
-        than 26, the alphabet is effectlively looped until the
-        corresponding letter is reached (e.g., 28 => 'b').
+    corresponding lowercase letter in the alphabet (e.g., 1 => 'a'). The
+    number must be greater than zero. If the number is greater than 26,
+    the alphabet is effectlively looped until the corresponding letter
+    is reached (e.g., 28 => 'b').
 
     Parameters:
         number (int, required): The number to map to a lowercase letter.
@@ -64,8 +64,8 @@ def spreadsheet_column(number: int) -> str:
     Map an integer number to a spreadsheet column label.
 
     This function takes an integer number and maps it to its
-        corresponding spreadsheet column label (e.g., 1 => 'A', 27 =>
-            'AA', etc.).
+    corresponding spreadsheet column label (e.g., 1 => 'A', 27 => 'AA',
+    etc.).
 
     Parameters:
         number (int, required): The number to map to a spreadsheet
